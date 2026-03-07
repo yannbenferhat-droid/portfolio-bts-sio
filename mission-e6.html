@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Missions E6 – Yann BEN FERHAT</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .e-page {
+      max-width: 860px;
+      width: 90%;
+      margin: calc(var(--header-h) + 48px) auto 80px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .e-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .e-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #f3f4f6;
+      letter-spacing: -0.02em;
+    }
+    .e-title span { color: var(--accent2); }
+    .missions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .mission-card {
+      background: rgba(30,32,45,0.98);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-decoration: none;
+      transition: border-color 0.25s, transform 0.2s;
+    }
+    .mission-card.is-link:hover {
+      border-color: rgba(52,211,153,0.35);
+      transform: translateX(4px);
+    }
+    .mission-card.is-empty {
+      opacity: 0.38;
+      cursor: default;
+    }
+    .mission-num {
+      width: 36px; height: 36px;
+      border-radius: 6px;
+      background: rgba(100,116,139,0.07);
+      border: 1px solid rgba(100,116,139,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.92rem; font-weight: 700; color: #475569;
+      flex-shrink: 0;
+    }
+    .mission-body { flex: 1; }
+    .mission-name { font-size: 0.98rem; font-weight: 600; color: #475569; margin-bottom: 3px; }
+    .mission-meta { font-size: 0.82rem; color: #374151; }
+    .badge {
+      display: inline-flex;
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-size: 0.79rem;
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+      background: rgba(100,116,139,0.08);
+      border: 1px solid rgba(100,116,139,0.15);
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+<header></header>
+
+<div class="e-page">
+  <div class="e-header">
+    <div class="e-title">Missions <span>E6</span></div>
+  </div>
+
+  <div class="missions-grid" style="grid-template-columns: 1fr 1fr; max-width: 600px;">
+    <div class="mission-card is-empty">
+      <div class="mission-num">01</div>
+      <div class="mission-body">
+        <div class="mission-name">Mise en situation à venir</div>
+        <div class="mission-meta">—</div>
+      </div>
+      <div class="badge">À venir</div>
+    </div>
+    <div class="mission-card is-empty">
+      <div class="mission-num">02</div>
+      <div class="mission-body">
+        <div class="mission-name">Mise en situation à venir</div>
+        <div class="mission-meta">—</div>
+      </div>
+      <div class="badge">À venir</div>
+    </div>
+  </div>
+</div>
+
+<footer></footer>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veille technologique – Yann BEN FERHAT</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .veille-page {
+      max-width: 860px;
+      width: 90%;
+      margin: calc(var(--header-h) + 48px) auto 80px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .veille-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #f3f4f6;
+      letter-spacing: -0.02em;
+    }
+    .veille-title span { color: var(--accent3); }
+
+    .context-card {
+      background: rgba(28,32,44,0.95);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 32px;
+    }
+    .context-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #3d5570;
+      margin-bottom: 8px;
+    }
+    .context-value {
+      font-size: 0.97rem;
+      color: #b8c8d8;
+      line-height: 1.65;
+      font-weight: 500;
+    }
+    .context-full {
+      grid-column: 1 / -1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .tag {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 5px;
+      background: rgba(90,200,250,0.07);
+      border: 1px solid rgba(90,200,250,0.13);
+      color: #7abbd0;
+    }
+
+    .iframe-card {
+      background: rgba(20,22,32,0.95);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .iframe-label {
+      padding: 14px 22px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #3d5570;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .iframe-label a {
+      font-size: 0.79rem;
+      color: #4a8aaa;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: none;
+      transition: color 0.2s;
+    }
+    .iframe-label a:hover { color: #7abbd0; }
+    .iframe-card iframe {
+      width: 100%;
+      height: 520px;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<header></header>
+
+<div class="veille-page">
+  <div class="veille-title">Veille <span>technologique</span></div>
+
+  <div class="context-card">
+    <div>
+      <div class="context-label">Sujet</div>
+      <div class="context-value">Les voitures autonomes</div>
+    </div>
+    <div>
+      <div class="context-label">Période</div>
+      <div class="context-value">Année scolaire 2024 – 2025</div>
+    </div>
+    <div class="context-full">
+      <div class="context-label">Démarche</div>
+      <div class="context-value">
+        Cette veille porte sur l'évolution des véhicules autonomes : technologies embarquées, acteurs du marché, enjeux de sécurité et perspectives réglementaires. Elle a été réalisée à partir de sources spécialisées (presse tech, publications constructeurs, rapports institutionnels) et synthétisée sous forme de présentation Canva.
+      </div>
+    </div>
+    <div class="context-full">
+      <div class="context-label">Thématiques abordées</div>
+      <div class="tags">
+        <span class="tag">Intelligence artificielle embarquée</span>
+        <span class="tag">Capteurs & LiDAR</span>
+        <span class="tag">Niveaux d'autonomie SAE</span>
+        <span class="tag">Acteurs du marché</span>
+        <span class="tag">Cybersécurité</span>
+        <span class="tag">Réglementation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="iframe-card">
+    <div class="iframe-label">
+      <span>Présentation Canva</span>
+      <a href="https://www.canva.com/design/DAG5po0n--8/t24qb14S-VFOMTBRl26new/view" target="_blank" rel="noopener">Ouvrir en plein écran ↗</a>
+    </div>
+    <iframe
+      src="https://www.canva.com/design/DAG5po0n--8/t24qb14S-VFOMTBRl26new/view?embed"
+      allowfullscreen
+      allow="fullscreen"
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
+
+<footer></footer>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certifications – Yann BEN FERHAT</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cert-page {
+      max-width: 860px;
+      width: 90%;
+      margin: calc(var(--header-h) + 48px) auto 80px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .cert-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #f3f4f6;
+      letter-spacing: -0.02em;
+    }
+    .cert-title span { color: var(--accent); }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .cert-card {
+      background: rgba(28, 32, 44, 0.95);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-decoration: none;
+      transition: border-color 0.25s, transform 0.2s;
+      position: relative;
+    }
+    .cert-card.is-link:hover {
+      border-color: rgba(90,200,250,0.25);
+      transform: translateY(-2px);
+    }
+    .cert-card.is-wip {
+      border-color: rgba(251,146,60,0.1);
+    }
+    .cert-card.is-wip:hover {
+      border-color: rgba(251,146,60,0.25);
+      transform: translateY(-2px);
+    }
+    .cert-card.is-done {
+      border-color: rgba(52,211,153,0.1);
+    }
+    .cert-card.is-done:hover {
+      border-color: rgba(52,211,153,0.28);
+      transform: translateY(-2px);
+    }
+
+    .cert-logo {
+      width: 48px; height: 48px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .cert-body { flex: 1; }
+    .cert-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #dce6ef;
+      margin-bottom: 3px;
+      line-height: 1.3;
+    }
+    .cert-org {
+      font-size: 0.84rem;
+      color: #7a90a4;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .cert-desc {
+      font-size: 0.84rem;
+      color: #6a8090;
+      line-height: 1.55;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-size: 0.79rem;
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+    .badge.obtained {
+      background: rgba(52,211,153,0.09);
+      border: 1px solid rgba(52,211,153,0.22);
+      color: #34d399;
+    }
+    .badge.wip {
+      background: rgba(251,146,60,0.08);
+      border: 1px solid rgba(251,146,60,0.2);
+      color: #fb923c;
+    }
+
+    /* Score Pix */
+    .pix-score {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .pix-score-num {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #f6c90e;
+      line-height: 1;
+    }
+    .pix-score-label {
+      font-size: 0.78rem;
+      color: #7a8a6a;
+      line-height: 1.3;
+    }
+    .pix-bar-wrap {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .pix-bar {
+      height: 100%;
+      width: 26%; /* 200/768 */
+      background: linear-gradient(90deg, #f6c90e, #f0a500);
+      border-radius: 2px;
+    }
+
+    .cert-verify {
+      font-size: 0.78rem;
+      color: #3d5570;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .cert-verify a {
+      color: #4a7a9b;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .cert-verify a:hover { color: #7abbd0; }
+  </style>
+</head>
+<body>
+<header></header>
+
+<div class="cert-page">
+  <div class="cert-title">Certi<span>fications</span></div>
+
+  <div class="cert-grid">
+
+    <!-- AZ-900 -->
+    <div class="cert-card is-wip">
+      <div class="cert-logo" style="background:#0a1628;border-color:rgba(0,120,212,0.25);padding:8px;">
+        <img src="images/azure.svg" alt="Azure" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+      <div class="cert-body">
+        <div class="cert-name">Microsoft Azure Fundamentals</div>
+        <div class="cert-org">Microsoft — AZ-900</div>
+        <div class="cert-desc">Fondamentaux du cloud Azure : services, modèles de déploiement, sécurité et conformité.</div>
+      </div>
+      <div class="badge wip">En cours</div>
+    </div>
+
+    <!-- CCNA -->
+    <div class="cert-card is-wip">
+      <div class="cert-logo" style="background:#001d35;border-color:rgba(4,159,217,0.25);padding:10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" alt="Cisco" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+      <div class="cert-body">
+        <div class="cert-name">CCNA — Introduction to Networks</div>
+        <div class="cert-org">Cisco</div>
+        <div class="cert-desc">Fondamentaux des réseaux : protocoles, routage, commutation et infrastructure LAN/WAN.</div>
+      </div>
+      <div class="badge wip">En cours</div>
+    </div>
+
+    <!-- Cyber état -->
+    <div class="cert-card is-wip">
+      <div class="cert-logo" style="padding:6px;">
+        <img src="https://www.ssi.gouv.fr/uploads/2014/10/logo_anssi.svg" alt="ANSSI" style="width:100%;height:100%;object-fit:contain;border-radius:4px;">
+      </div>
+      <div class="cert-body">
+        <div class="cert-name">Certification Cybersécurité</div>
+        <div class="cert-org">SecNumAcadémie — ANSSI</div>
+        <div class="cert-desc">Certification nationale de l'ANSSI sur les bases de la cybersécurité : menaces, bonnes pratiques et réglementation.</div>
+      </div>
+      <div class="badge wip">En cours</div>
+    </div>
+
+    <!-- Pix -->
+    <div class="cert-card is-done">
+      <div class="cert-logo" style="background:#1a1600;border-color:rgba(244,198,14,0.25);padding:8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/9/9b/Logo_pix.svg" alt="Pix" style="width:100%;height:100%;object-fit:contain;">
+      </div>
+      <div class="cert-body">
+        <div class="cert-name">Certification Pix</div>
+        <div class="cert-org">GIP Pix — Délivrée le 22/03/2022</div>
+        <div class="cert-desc">Certification nationale des compétences numériques : information, communication, création de contenu, sécurité et environnement numérique.</div>
+      </div>
+      <div class="badge obtained">✓ Obtenue</div>
+    </div>
+
+  </div>
+</div>
+
+<footer></footer>
+<script src="nav.js"></script>
+</body>
+</html>
