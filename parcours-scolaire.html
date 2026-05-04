@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parcours scolaire – Yann BEN FERHAT</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .parcours-page {
+      max-width: 780px;
+      width: 90%;
+      margin: calc(var(--header-h) + 40px) auto 80px auto;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      letter-spacing: -0.02em;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #8aabb8;
+      font-size: 0.92rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-btn:hover { color: #7aa6d9; }
+
+    /* Timeline */
+    .tl {
+      position: relative;
+      padding-left: 28px;
+    }
+    .tl::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, #8abbc8 8%, #8abbc8 92%, transparent);
+    }
+
+    .tl-item {
+      position: relative;
+      padding: 0 0 40px 28px;
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+
+    /* Marqueur rectangulaire */
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -3px;
+      top: 10px;
+      width: 7px;
+      height: 7px;
+      background: #7aaabf;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .tl-item.current::before {
+      background: #5ac8fa;
+    }
+
+    .tl-date {
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8aa4bc;
+      margin-bottom: 8px;
+    }
+    .tl-item.current .tl-date { color: #6aaac0; }
+
+    .tl-card {
+      background: rgba(28, 32, 44, 0.9);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .tl-item.current .tl-card {
+      border-color: rgba(90,200,250,0.1);
+      background: rgba(30, 36, 50, 0.95);
+    }
+
+    .tl-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+      padding: 6px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .tl-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .tl-logo .tl-initial {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #8abbc8;
+    }
+
+    .tl-body { flex: 1; }
+    .tl-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #dce6ef;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+    .tl-item.current .tl-title { color: #dde8f2; }
+    .tl-desc {
+      font-size: 0.96rem;
+      color: #8aaabb;
+      line-height: 1.6;
+    }
+    .tl-item.current .tl-desc { color: #9abbc8; }
+  </style>
+</head>
+<body>
+<header></header>
+
+<div class="parcours-page">
+  <div class="page-header">
+    <div class="page-title">Parcours scolaire</div>
+<a href="profil.html" class="back-btn">← Retour</a>
+  </div>
+
+  <div class="tl">
+
+    <div class="tl-item">
+      <div class="tl-date">Septembre 2019 – Juin 2022</div>
+      <div class="tl-card">
+        <div class="tl-logo"><span class="tl-initial">D</span></div>
+        <div class="tl-body">
+          <div class="tl-title">Lycée polyvalent Dorian</div>
+          <div class="tl-desc">Baccalauréat général spécialités mathématiques et sciences de l'ingénieur.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Septembre 2022 – Juillet 2023</div>
+      <div class="tl-card">
+        <div class="tl-logo"><img src="images/esiea.png" alt="ESIEA"></div>
+        <div class="tl-body">
+          <div class="tl-title">École Supérieure d'Informatique Électronique du Numérique — ESIEA</div>
+          <div class="tl-desc">Première année de cycle préparatoire intégré.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Septembre 2023 – Juin 2024</div>
+      <div class="tl-card">
+        <div class="tl-logo"><img src="images/sorbonne.png" alt="Sorbonne"></div>
+        <div class="tl-body">
+          <div class="tl-title">Université Sorbonne Paris Nord</div>
+          <div class="tl-desc">Première année de licence mathématiques.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item current">
+      <div class="tl-date">Septembre 2024 – Maintenant</div>
+      <div class="tl-card">
+        <div class="tl-logo"><img src="images/aurlom.png" alt="Aurlom"></div>
+        <div class="tl-body">
+          <div class="tl-title">Aurlom Education — BTS SIO option SISR</div>
+          <div class="tl-desc">Formation en alternance pour développer mes compétences en administration des systèmes et réseaux.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div style="max-width:780px;width:90%;margin:32px auto 0;display:flex;justify-content:center;">
+  <a href="parcours-professionnel.html" class="btn-primary" style="font-size:0.88rem;padding:10px 22px;">Voir le parcours professionnel →</a>
+</div>
+<footer></footer>
+<script src="nav.js"></script>
+</body>
+</html>

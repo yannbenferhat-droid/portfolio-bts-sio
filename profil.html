@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil – Yann BEN FERHAT</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .profil-page {
+      max-width: 860px;
+      width: 90%;
+      margin: calc(var(--header-h) + 48px) auto 80px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* ── Carte identité ── */
+    .identity-card {
+      background: rgba(30, 32, 45, 0.98);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 18px;
+      padding: 40px 48px;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+
+    .avatar {
+      width: 108px;
+      height: 108px;
+      border-radius: 7px;
+      background: #1a2233;
+      border: 1px solid rgba(90,200,250,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #5ac8fa;
+      letter-spacing: -1px;
+    }
+
+    .identity-info { flex: 1; }
+
+    .identity-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #f3f4f6;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .identity-meta {
+      color: #5a6a7a;
+      font-size: 0.96rem;
+      margin-bottom: 22px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .contact-list a {
+      color: #b4c8d8;
+      font-size: 1.02rem;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact-list a:hover { color: #a0aec0; }
+    .contact-list a svg, .contact-list a img {
+      width: 14px; height: 14px; opacity: 0.5; flex-shrink: 0;
+    }
+
+    /* ── Bio ── */
+    .bio-card {
+      background: rgba(30, 32, 45, 0.98);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 18px;
+      padding: 32px 48px;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7aaabb;
+      margin-bottom: 14px;
+    }
+
+    .bio-text {
+      color: #d0dce8;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      font-weight: 500;
+    }
+
+    /* ── Parcours ── */
+    .parcours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .parcours-card {
+      background: rgba(30, 32, 45, 0.98);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 7px;
+      padding: 26px 32px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .parcours-card:hover {
+      border-color: rgba(90,200,250,0.2);
+      transform: translateY(-3px);
+    }
+
+    .parcours-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #dce6ef;
+      margin-bottom: 3px;
+    }
+    .parcours-sub {
+      font-size: 0.86rem;
+      color: #7a90a4;
+    }
+
+    .parcours-arrow {
+      color: #2d3a48;
+      font-size: 0.95rem;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .parcours-card:hover .parcours-arrow {
+      color: #5ac8fa;
+      transform: translateX(3px);
+    }
+  </style>
+</head>
+<body>
+<header></header>
+
+<div class="profil-page">
+
+  <div class="identity-card">
+    <div class="avatar">YB</div>
+    <div class="identity-info">
+      <div class="identity-name">BEN FERHAT Yann</div>
+      <div class="identity-meta">21 ans · Domont, Val d'Oise · BTS SIO SISR · Alternant DSI</div>
+      <div class="contact-list">
+        <a href="mailto:yannbenferhat@gmail.com">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4V4zm8 9.293l6-4.5V6l-6 4.5L6 6v2.793l6 4.5z"/></svg>
+          yannbenferhat@gmail.com
+        </a>
+        <a href="tel:0783934025">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.07-.24c1.12.45 2.33.68 3.57.68a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1c-10.49 0-19-8.51-19-19a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.23 2.45.68 3.57a1 1 0 0 1-.24 1.07l-2.2 2.2z"/></svg>
+          07 83 93 40 25
+        </a>
+        <a href="https://www.linkedin.com/in/yannbenferhat" target="_blank">
+          <img src="LinkedIn-Icon-White-Logo.wine.svg" alt="LinkedIn" />
+          LinkedIn
+        </a>
+      </div>
+      <a href="docs/CV BEN FERHAT 2026.pdf" target="_blank" class="cv-link">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        Télécharger mon CV
+      </a>
+    </div>
+  </div>
+
+  <div class="bio-card">
+    <div class="section-label">Présentation</div>
+    <div class="bio-text">
+      Étudiant en BTS Services Informatiques aux Organisations, option Solutions d'Infrastructure, Systèmes et Réseaux, passionné par les technologies réseau et la cybersécurité.<br><br>
+      Dynamique, autonome et rigoureux, je poursuis ma formation en alternance pour développer mes compétences en administration des infrastructures informatiques et gestion des réseaux.
+    </div>
+  </div>
+
+  <div class="parcours-grid">
+    <a href="parcours-scolaire.html" class="parcours-card">
+      <div>
+        <div class="parcours-title">Parcours scolaire</div>
+        <div class="parcours-sub">Formations & diplômes</div>
+      </div>
+      <span class="parcours-arrow">→</span>
+    </a>
+    <a href="parcours-professionnel.html" class="parcours-card">
+      <div>
+        <div class="parcours-title">Parcours professionnel</div>
+        <div class="parcours-sub">Expériences & alternance</div>
+      </div>
+      <span class="parcours-arrow">→</span>
+    </a>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="nav.js"></script>
+<script>
+  setTimeout(() => {
+    const cards = document.querySelector('.parcours-grid');
+    if (!cards) return;
+    const target = cards.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 2) + (cards.offsetHeight / 2);
+    const start = window.scrollY;
+    const distance = target - start;
+    const duration = 900;
+    let startTime = null;
+    function easeInOutCubic(t) {
+      return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
+    }
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      window.scrollTo(0, start + distance * easeInOutCubic(progress));
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }, 1200);
+</script>
+</body>
+</html>

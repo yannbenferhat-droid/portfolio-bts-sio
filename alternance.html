@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alternance – Centre Hospitalier de Gonesse</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .alt-page {
+      max-width: 860px;
+      width: 90%;
+      margin: calc(var(--header-h) + 40px) auto 80px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .alt-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #8aabb8;
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-btn:hover { color: #b8d4e4; }
+
+    /* Hero */
+    .hero-card {
+      background: rgba(22, 30, 44, 0.97);
+      border: 1px solid rgba(90,200,250,0.1);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .hero-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.6) saturate(0.7);
+    }
+    .hero-body {
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .hero-logo {
+      width: 52px; height: 52px;
+      border-radius: 10px;
+      background: #fff;
+      padding: 5px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .hero-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .hero-title { font-size: 1.15rem; font-weight: 700; color: #e2e8f0; margin-bottom: 4px; }
+    .hero-meta { font-size: 0.82rem; color: #7a9ab0; display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Cards */
+    .section-card {
+      background: rgba(28, 32, 44, 0.92);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 24px 28px;
+    }
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8aabbc;
+      margin-bottom: 14px;
+    }
+    .section-text {
+      font-size: 0.95rem;
+      color: #a8bcc8;
+      line-height: 1.75;
+      font-weight: 500;
+    }
+
+    /* Infra grid */
+    .infra-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .infra-item {
+      background: rgba(18, 22, 34, 0.8);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .infra-item-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3d5570;
+      margin-bottom: 6px;
+    }
+    .infra-item-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #b0c8d8;
+      line-height: 1.4;
+    }
+    .infra-item-sub {
+      font-size: 0.8rem;
+      color: #5a7888;
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+    .infra-item.warn {
+      border-color: rgba(251,146,60,0.12);
+    }
+    .infra-item.warn .infra-item-value { color: #fb923c; }
+    .infra-item.warn .infra-item-label { color: rgba(251,146,60,0.5); }
+
+    /* Pôles */
+    .poles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .pole-item {
+      background: rgba(20, 24, 36, 0.8);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.84rem;
+      color: #7a9ab0;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+    .pole-item.highlight {
+      border-color: rgba(90,200,250,0.12);
+      color: #7abbd0;
+      background: rgba(90,200,250,0.04);
+    }
+
+    /* Rôles */
+    .roles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 4px;
+    }
+    .role-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.93rem;
+      color: #a0b8c8;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+    .role-item::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 1px;
+      background: #3a5268;
+      flex-shrink: 0;
+      margin-top: 9px;
+    }
+
+    .alt-actions { display: flex; justify-content: flex-end; }
+  </style>
+</head>
+<body>
+<header></header>
+
+<div class="alt-page">
+
+  <div class="alt-header">
+    <div style="font-size:1.4rem;font-weight:700;color:#e2e8f0;letter-spacing:-0.02em;">Alternance</div>
+    <a href="parcours-professionnel.html" class="back-btn">← Parcours professionnel</a>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero-card">
+    <img class="hero-img" src="images/hopital-gonesse.png" alt="Centre Hospitalier de Gonesse">
+    <div class="hero-body">
+      <div class="hero-logo">
+        <img src="images/logo-gonesse.jpg" alt="Logo CH Gonesse">
+      </div>
+      <div>
+        <div class="hero-title">Centre Hospitalier de Gonesse</div>
+        <div class="hero-meta">
+          <span>📍 Gonesse, Val d'Oise</span>
+          <span>📅 Depuis septembre 2025</span>
+          <span>🏥 GHT Plaine de France</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Établissement -->
+  <div class="section-card">
+    <div class="section-label">L'établissement</div>
+    <div class="section-text">
+      Le Centre Hospitalier de Gonesse est un établissement public moderne affilié au GHT Plaine de France. Il propose une offre de soins étendue, regroupant de nombreux services médicaux, chirurgicaux et médico-techniques au service de la population du territoire.
+    </div>
+  </div>
+
+  <!-- DSIN -->
+  <div class="section-card">
+    <div class="section-label">Direction des Systèmes d'Information et du Numérique — DSIN</div>
+    <div class="section-text">
+      La DSIN gère l'ensemble des infrastructures informatiques du site. Le parc inclut environ 2 000 postes de travail répartis dans tous les services hospitaliers.
+    </div>
+    <div class="poles-grid">
+      <div class="pole-item highlight"><strong>PTI</strong> — Poste de Travail Informatique</div>
+      <div class="pole-item"><strong>Infrastructure</strong> — Réseaux & serveurs</div>
+      <div class="pole-item"><strong>DPI</strong> — Dossier Patient Informatisé</div>
+      <div class="pole-item"><strong>AMTI</strong> — Administratif, Médico-Technique & Interopérabilité</div>
+      <div class="pole-item" style="grid-column: span 2;"><strong>Équipe transversale</strong> — DSI et RSSI</div>
+    </div>
+  </div>
+
+  <!-- Parc informatique -->  
+  <div class="section-card">
+    <div class="section-label">Parc informatique</div>
+    <div class="section-text">
+      Le parc est composé majoritairement de matériel Dell, avec une migration Windows 10 → 11 en cours et une hétérogénéité des suites Office à gérer.
+    </div>
+    <div class="infra-grid">
+      <div class="infra-item">
+        <div class="infra-item-label">Postes fixes</div>
+        <div class="infra-item-value">Dell OptiPlex</div>
+        <div class="infra-item-sub">Majorité du parc bureautique</div>
+      </div>
+      <div class="infra-item">
+        <div class="infra-item-label">Portables</div>
+        <div class="infra-item-value">Dell Latitude</div>
+        <div class="infra-item-sub">+ minorité HP</div>
+      </div>
+      <div class="infra-item">
+        <div class="infra-item-label">Parc total</div>
+        <div class="infra-item-value">~2 000 postes</div>
+        <div class="infra-item-sub">Tous services confondus</div>
+      </div>
+      <div class="infra-item warn">
+        <div class="infra-item-label">Windows 11</div>
+        <div class="infra-item-value">300 non compatibles</div>
+        <div class="infra-item-sub">Migration en cours</div>
+      </div>
+      <div class="infra-item">
+        <div class="infra-item-label">Suite Office</div>
+        <div class="infra-item-value">Microsoft 365</div>
+        <div class="infra-item-sub">2013 / 2019 / LTSC 2024</div>
+      </div>
+      <div class="infra-item">
+        <div class="infra-item-label">OS actuel</div>
+        <div class="infra-item-value">Windows 10 / 11</div>
+        <div class="infra-item-sub">Cohabitation en cours</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Outils -->
+  <div class="section-card">
+    <div class="section-label">Outils utilisés</div>
+    <div class="infra-grid">
+      <div class="infra-item" style="border-color:rgba(90,200,250,0.1);">
+        <div class="infra-item-label">Ticketing</div>
+        <div class="infra-item-value">ISILOG</div>
+        <div class="infra-item-sub">Gestion et suivi des incidents, demandes et interventions du parc hospitalier</div>
+      </div>
+      <div class="infra-item" style="border-color:rgba(90,200,250,0.1);">
+        <div class="infra-item-label">Prise en main à distance</div>
+        <div class="infra-item-value">TightVNC</div>
+        <div class="infra-item-sub">Accès aux postes utilisateurs à distance pour assistance et dépannage sans déplacement</div>
+      </div>
+      <div class="infra-item" style="border-color:rgba(90,200,250,0.1);">
+        <div class="infra-item-label">Annuaire & droits</div>
+        <div class="infra-item-value">Active Directory</div>
+        <div class="infra-item-sub">Gestion des comptes, groupes, OU et politiques de sécurité (GPO)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sauvegarde -->
+  <div class="section-card">
+    <div class="section-label">Sauvegarde & continuité</div>
+    <div class="section-text">
+      Le Centre Hospitalier de Gonesse utilise <strong>Veeam Backup & Replication</strong> pour assurer la sauvegarde et la restauration des données critiques du système d'information hospitalier. Cette solution permet de protéger les serveurs, les machines virtuelles et les données patients contre toute perte accidentelle ou incident majeur.<br><br>
+      La gestion opérationnelle de Veeam est assurée par l'<strong>équipe Infrastructure</strong> de la DSIN. En tant que membre du PTI, je n'interviens pas directement sur cette solution.
+    </div>
+  </div>
+
+  <!-- Rôle -->
+  <div class="section-card">
+    <div class="section-label">Mon rôle au sein du PTI</div>
+    <div class="roles-list">
+      <div class="role-item">Installation et configuration de nouveaux postes informatiques (Windows 10/11, logiciels métier, suite Office)</div>
+      <div class="role-item">Support et assistance technique via ISILOG — prise en charge des tickets, interventions sur site et prise en main à distance avec TightVNC</div>
+      <div class="role-item">Maintenance et suivi du parc informatique — diagnostics, réparations, renouvellement d'équipements, inventaire</div>
+      <div class="role-item">Gestion des comptes utilisateurs et des ressources dans Active Directory (création, modification, suppression, groupes, OU, droits)</div>
+      <div class="role-item">Participation à la migration Windows 10 vers Windows 11 et à la standardisation de la suite Office</div>
+      <div class="role-item">Documentation technique — procédures, suivis d'intervention</div>
+      <div class="role-item">Initiation au câblage réseau et configuration de switches</div>
+      <div class="role-item">Gestion des smartphones — enrôlement, configuration et suivi des appareils mobiles du parc hospitalier</div>
+      <div class="role-item">Configuration de postes DECT — paramétrage et mise en service des téléphones sans fil</div>
+    </div>
+  </div>
+
+  <div class="alt-actions">
+    <a href="docs/presentation-entreprise.pdf" target="_blank" class="btn-primary" style="font-size:0.9rem;padding:10px 20px;">
+      Télécharger la présentation de la DSIN
+    </a>
+  </div>
+
+</div>
+
+<footer></footer>
+<script src="nav.js"></script>
+</body>
+</html>
