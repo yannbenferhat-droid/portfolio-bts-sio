@@ -41,6 +41,6 @@
 
   const footer = document.querySelector('footer');
   if (footer) {
-    footer.innerHTML = `<p>© ${year} – Portfolio IT · BTS SIO SISR</p>`;
+    footer.innerHTML = `<div class="site-footer-inner"><p class="site-footer-copy">© ${year} – Portfolio IT · BTS SIO SISR</p><a href="mentions-legales.html" class="site-footer-legal">Mentions légales</a></div>`;
   }
 })();
